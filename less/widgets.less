@@ -1,0 +1,291 @@
+/* Общие стили виджета */
+
+.widget{
+	background: #fff;
+	min-height: 435px;
+	border-radius: 10px;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+	&--mini{ min-height: 350px; margin-bottom: 16px; }
+	&-head{
+		padding: 12px 0;
+		text-align: center;
+		position: relative;
+		p{
+			.gotham-m;
+			font-size: 14px;
+			color: @blue-color;
+			display: inline-block;
+			vertical-align: middle;
+			.plus{
+				width: 32px;
+				height: 32px;
+				font-size: 0;
+				background: url(../img/widget-icons.png) no-repeat;
+				background-position: -143px 0;
+				position: absolute;
+				right: 7px; top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		.icon:before{
+			content: "";
+			margin-right: 6px;
+			display: inline-block;
+			vertical-align: middle;
+			background: url(../img/widget-icons.png) no-repeat;
+		}
+	}
+	.bottom-line{ border-bottom: 1px solid rgba(0,0,0,0.10); }
+	.progress-block{
+		text-align: center;
+		padding: 18px 0;
+		p{
+			margin-bottom: 12px;
+			.grey{ color: #999; }
+		}
+		.progress{
+			width: 84%;
+			margin: 0 auto;
+			height: 15px;
+			border-radius: 10px;
+			background: #e5e5e5;
+			box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.10);
+		}
+		.percent{
+			width: 50%;
+			height: 100%;
+			background: linear-gradient(to right, #2eb6c7 0%, #2eccd5 100%);
+			border-radius: 10px 0 0 10px;
+		}
+	}
+	/* В маленьких виджетах */ 
+	.date-block{
+		padding: 14px 20px 20px;
+		select, .date p{ font-size: 13px; }
+		.customize-select:before{ background: #fff; }
+		.date{
+			margin: 0;
+			text-align: right;
+		}
+	}
+	.timetable{
+		text-align: center;
+		img{ width: 85%; margin: 0 auto; }
+	}
+}
+
+/* Оформление листа */ 
+.widget-list{
+	.list-item{
+		cursor: pointer;
+		padding: 18px 0 17px;
+		background: url(../img/list-arrow.png) no-repeat;
+		background-position: 92% 50%;
+		p{ 
+			padding: 0 30px 0 20px; 
+			transition: 0.2s ease color;
+		}
+		.name{ 
+			.gotham-m; 
+			margin-bottom: 4px;
+		}
+		.data{
+			color: @grey-color;
+			font-size: 11px;
+			line-height: 14px;
+		}
+		.time{
+			color: @grey-color;
+			font-size: 11px;
+			line-height: 14px;
+			span{ padding-right: 5px; }
+		}
+		.event{
+			font-size: 14px;
+			opacity: 0.9;
+		}
+		.current{
+			color: @blue-color;
+		}
+		&:hover .name, &:hover .data, &:hover .event {
+			color: @red-color;
+		}
+	}
+}
+
+/* Виджет: рекомендации - иконка */ 
+.widget-head .icon-recomendation:before{
+	width: 16px;
+	height: 20px;
+	background-position: 0 -6px;
+}
+
+/* Виджет: текущий курс - иконка */ 
+.widget-head .icon-course:before{
+	width: 14px;
+	height: 20px;
+	background-position: -47px -6px;
+}
+.course-widget{
+	.progress .percent{ width: 70%; }
+}
+
+/* Виджет: события - иконка */ 
+.widget-head .icon-event:before{
+	width: 20px;
+	height: 20px;
+	background-position: -93px -6px;
+}
+
+/* Виджет: пульс - иконка */ 
+.widget-head .icon-pulse:before{
+	width: 20px;
+	height: 19px;
+	background-position: 0px -47px;
+}
+
+/* Виджет: давление - иконка */ 
+.widget-head .icon-pressure:before{
+	width: 21px;
+	height: 19px;
+	background-position: -49px -47px;
+}
+
+/* Виджет: вес - иконка */ 
+.widget-head .icon-weight:before{
+	width: 18px;
+	height: 19px;
+	background-position: -103px -47px;
+}
+
+/* Виджет: сахар - иконка */ 
+.widget-head .icon-sugar:before{
+	width: 14px;
+	height: 19px;
+	background-position: 0 -91px;
+}
+
+/* Виджет: температура - иконка */ 
+.widget-head .icon-temperature:before{
+	width: 18px;
+	height: 19px;
+	background-position: -52px -91px;
+}
+
+/* Виджет: холестерин - иконка */ 
+.widget-head .icon-cholesterol:before{
+	width: 14px;
+	height: 19px;
+	background-position: -103px -91px;
+}
+
+/* Виджет - пульс */ 
+
+.pulse-widget{ padding: 16px; }
+
+.pulse-info{
+	position: relative;
+	.head{
+		.gotham-m;
+		padding-bottom: 9px;
+		font-size: 15px;
+		line-height: 21px;
+		text-align: center;
+		color: rgba(0,0,0,.9);
+	}
+	.icon-plus{
+		position: absolute;
+		right: 10px;
+		top: -3px;
+	}
+	.icon-pulse:before{
+		content: "";
+		width: 20px;
+		height: 17px;
+		margin-right: 8px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-pulse.png) no-repeat;
+	}
+	.graph-block{
+		padding: 5px 0 38px;
+		text-align: center;
+		border-bottom: 1px solid #f0f0f0;
+	}
+}
+
+
+/* Блок с датой */
+.date-block{
+	line-height: 21px;
+	.month, .date{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.date{ margin-left: 40px; }
+	.date p{
+		.gotham-m;
+		font-size: 15px;
+		color: @blue-color;
+	}
+}
+
+
+/* Данные о пульсе */
+.pulse-data{
+	padding-top: 25px;
+	.head{
+		font-size: 15px;
+		line-height: 21px;
+		text-align: center;
+		color: rgba(0,0,0,.9);
+		margin-bottom: 16px;
+	}
+}
+.table-data{
+	width: 90%;
+	margin: 0 auto;
+	tr{
+		border-bottom: 2px solid rgba(0,0,0,0.1);
+		&:last-child{ border-bottom: none; } 
+	}
+	td{
+		padding: 11px 0px 10px 7px;
+		&.date{ width: 18%; }
+		&.time{ 
+			width: 20%; 
+			padding-left: 0;
+		}
+		&.number{
+			width: 60%; 
+			text-align: right; 
+			padding-right: 17px;
+		}
+	}
+	span{
+		font-size: 12px;
+		&.grey{
+			font-size: 10px;
+			color: rgba(0,0,0,0.5);
+		}
+	}
+}
+
+.select-list{
+	position: relative;
+
+	&.open{
+
+		.list-drop{
+			display: block;
+		}
+	}
+
+	.list-drop{
+		position: absolute;
+		top: 20px;
+		left: 0;
+		display: none;
+		z-index: 999999;
+	}
+}

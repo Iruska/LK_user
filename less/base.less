@@ -133,7 +133,7 @@ a{
 		.menu-link{
 			display: block;
 			margin-bottom: 4px;
-			&:hover a{ background: rgba(255, 255, 255, .3); }
+			&:hover a, &.current a{ background: rgba(255, 255, 255, .3); }
 			a{
 				color: #fff;
 				display: block;
@@ -230,7 +230,7 @@ a{
 	.tabs{
 		text-align: center;
 		margin-bottom: 16px;
-		a{
+		li{
 			margin: 0 3px;
 			font-size: 14.5px;
 			line-height: 15px;
@@ -239,6 +239,7 @@ a{
 			vertical-align: top;
 			display: inline-block;
 			color: rgba(0,0,0,0.55);
+			cursor: pointer;
 			&.current{
 				color: #fff;
 				background: #ccc;
@@ -253,128 +254,6 @@ a{
 /* =================
    widgets styles
    ================= */
-
-/* Общие стили виджета */
-.widget{
-	background: #fff;
-	min-height: 435px;
-	border-radius: 10px;
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-	&-head{
-		padding: 12px 0;
-		text-align: center;
-		position: relative;
-		p{
-			.gotham-m;
-			font-size: 14px;
-			color: @blue-color;
-			display: inline-block;
-			vertical-align: middle;
-			.plus{
-				width: 32px;
-				height: 32px;
-				font-size: 0;
-				background: url(../img/widget-icons.png) no-repeat;
-				background-position: -143px 0;
-				position: absolute;
-				right: 7px; top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-		.icon:before{
-			content: "";
-			margin-right: 8px;
-			display: inline-block;
-			vertical-align: middle;
-			background: url(../img/widget-icons.png) no-repeat;
-		}
-	}
-	.bottom-line{ border-bottom: 1px solid rgba(0,0,0,0.10); }
-	.progress-block{
-		text-align: center;
-		padding: 18px 0;
-		p{
-			margin-bottom: 12px;
-			.grey{ color: #999; }
-		}
-		.progress{
-			width: 84%;
-			margin: 0 auto;
-			height: 15px;
-			border-radius: 10px;
-			background: #e5e5e5;
-			box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.10);
-		}
-		.percent{
-			width: 50%;
-			height: 100%;
-			background: linear-gradient(to right, #2eb6c7 0%, #2eccd5 100%);
-			border-radius: 10px 0 0 10px;
-		}
-	}
-}
-.widget-list{
-	.list-item{
-		cursor: pointer;
-		padding: 18px 0 17px;
-		background: url(../img/list-arrow.png) no-repeat;
-		background-position: 92% 50%;
-		p{ 
-			padding: 0 30px 0 20px; 
-			transition: 0.2s ease color;
-		}
-		.name{ 
-			.gotham-m; 
-			margin-bottom: 4px;
-		}
-		.data{
-			color: @grey-color;
-			font-size: 11px;
-			line-height: 14px;
-		}
-		.time{
-			color: @grey-color;
-			font-size: 11px;
-			line-height: 14px;
-			span{ padding-right: 5px; }
-		}
-		.event{
-			font-size: 14px;
-			opacity: 0.9;
-		}
-		.current{
-			color: @blue-color;
-		}
-		&:hover .name, &:hover .data, &:hover .event {
-			color: @red-color;
-		}
-	}
-}
-
-/* Виджет: рекомендации */ 
-.widget-head .icon-recomendation:before{
-	width: 16px;
-	height: 20px;
-	background-position: 0 -6px;
-}
-
-/* Виджет: текущий курс */ 
-.widget-head .icon-course:before{
-	width: 14px;
-	height: 20px;
-	background-position: -47px -6px;
-}
-
-.course-widget{
-	.progress .percent{ width: 70%; }
-}
-
-/* Виджет: события */ 
-.widget-head .icon-event:before{
-	width: 20px;
-	height: 20px;
-	background-position: -93px -6px;
-}
 
 /* Настроить блоки */ 
 .settings{
@@ -396,6 +275,69 @@ a{
 	}
 }
 
+
+/* Пагинация */
+
+.pagination{
+	padding: 18px 15px 0;
+	.customize-select{
+		.gotham-m;
+		font-size: 13px;
+		color: @blue-color;
+		select{ font-size: 13px; }
+		&:before{
+			background: #fff;
+		}
+	}
+	.numeration{
+		text-align: right;
+	}
+}
+.numeration{
+	li{
+		margin: 0 2px;
+		display: inline-block;
+		vertical-align: top;
+		a{ 
+			.gotham-m;
+			font-size: 13px; 
+		}
+		&.active a{ color: #000; }
+	}
+}
+
+/* =================
+   верхняя под-плашка
+   ================= */
+
+.main-head{
+	margin-bottom: 16px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs{
+	a{
+		display: inline-block;
+		vertical-align: middle;
+		transition: 0.2s ease opacity;
+		&:hover{ opacity: 0.8; }
+	}
+
+	.back{
+		.gotham-m;
+		font-size: 15px;
+		padding-left: 25px;
+	}
+	.icon-back:before{
+		content: "";
+		width: 10px;
+		height: 17px;
+		margin-right: 6px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-back.png) no-repeat;
+	}
+} 
 
 
 /* =================

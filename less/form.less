@@ -1,2 +1,38 @@
 /* Стили для форм */ 
 
+
+/* Кастомизация селекта */
+
+.customize-select select {
+	.gotham-m;
+	font-size: 15px;
+	color: @blue-color;
+	display: inline-block;
+	vertical-align: middle;
+	background: transparent;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+	min-width: 60px;
+}
+.customize-select { 
+	position:relative; 
+	&:after{
+		content: " ";
+		width: 10px;
+		height: 5px;
+		position: absolute;
+		top: 50%; right: 0;
+		transform: translateY(-50%);
+		background: url(../img/select-arrow.png) no-repeat;
+	}
+	&:before{
+		content: " ";
+		width: 20px;
+		height: 20px;
+		background: @lightblue-bg;
+		position: absolute;
+		right: 0;
+	}
+}

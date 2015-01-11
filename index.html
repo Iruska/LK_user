@@ -60,8 +60,8 @@
               </div>
               <!-- Навигация -->
               <ul class="sidebar_menu">
-                <li class="menu-link"><a href="#" class="icon icon-heart">Состояние здоровья</a></li>
-                <li class="menu-link"><a href="#" class="icon icon-monitor">Монитор показателей</a></li>
+                <li class="menu-link current"><a href="index.html" class="icon icon-heart">Состояние здоровья</a></li>
+                <li class="menu-link"><a href="monitoring.html" class="icon icon-monitor">Монитор показателей</a></li>
                 <li class="menu-link"><a href="#" class="icon icon-cart">Медицинская карта</a></li>
                 <li class="menu-link"><a href="#" class="icon icon-data">Медицинские данные</a></li>
                 <li class="menu-link"><a href="#" class="icon icon-doctor">Врачи и клиники</a></li>
@@ -96,13 +96,14 @@
             <div class="diagrams">
               <div class="row">
                 <div class="col-4">
+                  <!-- http://cssdeck.com/labs/3iicdta1 -->
                   <img src="img/round-progress.png" alt="" />
                 </div>
-                <div class="col-8">
-                  <div class="tabs">
-                    <a href="#" class="current">Обзор</a>
-                    <a href="#">Оценка рисков</a>
-                  </div>
+                <div class="col-8 tabs-section">
+                  <ul class="tabs">
+                    <li class="current">Обзор</li>
+                    <li>Оценка рисков</li>
+                  </ul>
                   <div class="graph graph-review">
                     <img src="img/graph.jpg" alt="" />
                   </div>
@@ -239,6 +240,7 @@
 
     
     <script src="js/libraries.js" ></script>
+
     <script>
       $(".dropdown-menu-link").click(function () {
         $(".dropdown-menu").toggleClass('display');
@@ -251,6 +253,12 @@
       $(".exit").click(function () {
         $(".quiz").css('opacity','0');
       });
+
+      $('ul.tabs').on('click', 'li:not(.current)', function() {  
+          $(this).addClass('current').siblings().removeClass('current')  
+            .parents('.tabs-section').find('div.graph').eq($(this).index()).fadeIn(150).siblings('div.graph').hide();  
+      })  
+
     </script>
     
     
