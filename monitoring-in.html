@@ -76,51 +76,56 @@
                 <a href="index.html" class="back icon-back">Назад</a>
               </div>
               <div class="date-block col-8">
-                <div class="month">
-                  <form action="" method="">
-                    <!-- Первый вариант (немного кривой) -->
-                    <!-- <label class="customize-select">
-                      <select>
-                        <option selected>Месяц</option>
-                        <option>Январь</option>
-                        <option>Февраль</option>
-                        <option>Март</option>
-                        <option>Апрель</option>
-                        <option>Май</option>
-                        <option>Июнь</option>
-                        <option>Июль</option>
-                        <option>Август</option>
-                        <option>Сентябрь</option>
-                        <option>Октябрь</option>
-                        <option>Ноябрь</option>
-                        <option>Декабрь</option>
-                      </select>
-                    </label> -->
+                <div class="row">
+                  <div class="col-2">
+                    <div class="month">
+                      <form action="" method="">
+                        <!-- Первый вариант (немного кривой) -->
+                        <!-- <label class="customize-select">
+                          <select>
+                            <option selected>Месяц</option>
+                            <option>Январь</option>
+                            <option>Февраль</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Июнь</option>
+                            <option>Июль</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                            <option>Октябрь</option>
+                            <option>Ноябрь</option>
+                            <option>Декабрь</option>
+                          </select>
+                        </label> -->
 
-                    <!-- Второй вариант -->
-                    <div class="select-list">
-                      <div class="select-list-text">Месяц</div>
-                      <input type="hidden" class="select-value" name="select-value" value="0" />
-                      <ul class="list-drop">
-                        <li class="list-drop-item" data-value='0'>Месяц</li>
-                        <li class="list-drop-item" data-value='1'>Январь</li>
-                        <li class="list-drop-item" data-value='2'>Февраль</li>
-                        <li class="list-drop-item" data-value='3'>Март</li>
-                        <li class="list-drop-item" data-value='4'>Апрель</li>
-                        <li class="list-drop-item" data-value='5'>Май</li>
-                        <li class="list-drop-item" data-value='6'></li>
-                        <li class="list-drop-item" data-value='7'></li>
-                        <li class="list-drop-item" data-value='8'></li>
-                        <li class="list-drop-item" data-value='9'></li>
-                        <li class="list-drop-item" data-value='10'></li>
-                        <li class="list-drop-item" data-value='11'></li>
-                        <li class="list-drop-item" data-value='12'>Декабрь</li>
-                      </ul>
+                        <!-- Второй вариант -->
+                        <div class="select-list">
+                          <div class="select-list-text">Месяц</div>
+                          <input type="hidden" class="select-value" name="select-value" value="0" />
+                          <ul class="list-drop">
+                            <li class="list-drop-item" data-value='1'>Январь</li>
+                            <li class="list-drop-item" data-value='2'>Февраль</li>
+                            <li class="list-drop-item" data-value='3'>Март</li>
+                            <li class="list-drop-item" data-value='4'>Апрель</li>
+                            <li class="list-drop-item" data-value='5'>Март</li>
+                            <li class="list-drop-item" data-value='6'>Май</li>
+                            <li class="list-drop-item" data-value='7'>Июнь</li>
+                            <li class="list-drop-item" data-value='8'>Июль</li>
+                            <li class="list-drop-item" data-value='9'>Август</li>
+                            <li class="list-drop-item" data-value='10'>Сентябрь</li>
+                            <li class="list-drop-item" data-value='11'>Октябрь</li>
+                            <li class="list-drop-item" data-value='12'>Декабрь</li>
+                          </ul>
+                        </div>
+                      </form>
                     </div>
-                  </form>
-                </div>
-                <div class="date">
-                  <p>21/05/2014 - 21/06/2014</p>
+                  </div>
+                  <div class="col-10">
+                    <div class="date">
+                      <p>21/05/2014 - 21/06/2014</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,15 +280,17 @@
                   <div class="row">
 
                     <div class="col-6">
-                      <label for="number" class="customize-select">
-                        Показывать по 
-                        <select id="number">
-                        <option>10</option>
-                        <option selected>30</option>
-                        <option>50</option>
-                        <option>100</option>
-                        </select>
-                      </label>
+                      <div class="select-list">
+                        <label>Показывать по</label>
+                        <div class="select-list-text">30</div>
+                        <input type="hidden" class="select-value" name="select-value" value="3" />
+                        <ul class="list-drop list-drop_pages">
+                          <li class="list-drop-item" data-value='1'>10</li>
+                          <li class="list-drop-item" data-value='2'>20</li>
+                          <li class="list-drop-item" data-value='3'>30</li>
+                          <li class="list-drop-item" data-value='4'>50</li>
+                        </ul>
+                      </div>
                     </div>
 
                     <div class="col-6 pull-right">
@@ -300,7 +307,6 @@
               </div>
             </div>
 
-            
           </section>
         </div>
       </div>

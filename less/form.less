@@ -1,8 +1,7 @@
 /* Стили для форм */ 
 
 
-/* Кастомизация селекта */
-
+/* Кастомизация селекта - Месяц (первый вариант) */
 .customize-select select {
 	.gotham-m;
 	font-size: 15px;
@@ -34,5 +33,58 @@
 		background: @lightblue-bg;
 		position: absolute;
 		right: 0;
+	}
+}
+
+/* Стилизация селекта - Месяц (второй вариант) */ 
+.select-list{
+	.gotham-m;
+	font-size: 15px;
+	color: @blue-color;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	&-text{
+		cursor: pointer;
+		padding-right: 15px;
+		background: url(../img/select-arrow.png) no-repeat;
+		background-position: 100% 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.list-drop{
+		cursor: pointer;
+		background: #fff;
+		padding: 5px 10px 5px 5px;
+		border-radius: 4px;
+		border: 1px solid #f0f0f0;
+		position: absolute;
+		top: 20px; left: -5px;
+		display: none;
+		z-index: 999;
+		transition: 0.2s ease all;
+		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+		li{ 
+			margin: 4px 0;
+			line-height: 14px; 
+			&:hover{ opacity: 0.8; }
+		}
+		&_pages{
+			left: auto;
+			right: 0;
+		}
+	}
+
+	&.open{
+		.list-drop{ 
+			display: block; 
+		}
+	}
+
+	label{
+		display: inline-block;
+		vertical-align: top;
 	}
 }

@@ -61,12 +61,7 @@
 	/* В маленьких виджетах */ 
 	.date-block{
 		padding: 14px 20px 20px;
-		select, .date p{ font-size: 13px; }
-		.customize-select:before{ background: #fff; }
-		.date{
-			margin: 0;
-			text-align: right;
-		}
+		.select-list, .date p{ font-size: 13px; }
 	}
 	.timetable{
 		text-align: center;
@@ -110,6 +105,20 @@
 		&:hover .name, &:hover .data, &:hover .event {
 			color: @red-color;
 		}
+	}
+}
+
+/* Блок с датой */
+.date-block{
+	line-height: 21px;
+	.month, .date{
+		display: inline-block;
+		vertical-align: top;
+	}
+	.date p{
+		.gotham-m;
+		font-size: 15px;
+		color: @blue-color;
 	}
 }
 
@@ -214,23 +223,6 @@
 	}
 }
 
-
-/* Блок с датой */
-.date-block{
-	line-height: 21px;
-	.month, .date{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.date{ margin-left: 40px; }
-	.date p{
-		.gotham-m;
-		font-size: 15px;
-		color: @blue-color;
-	}
-}
-
-
 /* Данные о пульсе */
 .pulse-data{
 	padding-top: 25px;
@@ -271,21 +263,3 @@
 	}
 }
 
-.select-list{
-	position: relative;
-
-	&.open{
-
-		.list-drop{
-			display: block;
-		}
-	}
-
-	.list-drop{
-		position: absolute;
-		top: 20px;
-		left: 0;
-		display: none;
-		z-index: 999999;
-	}
-}
