@@ -232,6 +232,11 @@ select {
   width: 81%;
 }
 /* Стили для форм */
+input[type="button"] {
+  border: none;
+  outline: none;
+  background: none;
+}
 /* Кастомизация селекта - Месяц (первый вариант) */
 .customize-select select {
   font-family: 'Gotham-Medium', Arial, sans-serif;
@@ -707,6 +712,90 @@ a {
   font-size: 10px;
   color: rgba(0, 0, 0, 0.5);
 }
+/* Виджет - рекомендации */
+.sidebar-list {
+  height: 100%;
+  padding-right: 0;
+  border-right: 1px solid #f0f0f0;
+}
+.recomendations-widget .complete {
+  font-family: 'Gotham', Arial, sans-serif;
+  color: #000;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.recomendations-widget .progress-block {
+  width: 290px;
+  padding: 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.recomendations-widget .progress-block .percent {
+  width: 80%;
+}
+.buttons-block {
+  padding: 14px 0;
+  text-align: center;
+}
+.buttons-block .row [class*=col-] {
+  padding: 0;
+}
+.buttons-block .btn {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 7px 17px 7px 30px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+.buttons-block .btn:before {
+  content: "";
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  left: 8px;
+  background: url(../img/buttons-icons.png) no-repeat;
+}
+.buttons-block .btn--check {
+  color: #2dd25f;
+  border-color: #2dd25f;
+}
+.buttons-block .btn--check:before {
+  left: 10px;
+  background-position: 0 0;
+}
+.buttons-block .btn--record {
+  min-width: 190px;
+  color: #20b3cd;
+  border-color: #20b3cd;
+}
+.buttons-block .btn--record:before {
+  background-position: -43px 0;
+}
+.buttons-block .btn--cancel {
+  color: #dc4531;
+  border-color: #dc4531;
+}
+.buttons-block .btn--cancel:before {
+  background-position: -93px 0;
+}
+.description-block {
+  padding: 0 20px!important;
+}
+.description-block .header-list {
+  padding: 25px 0;
+  text-align: center;
+}
+.description-block .header-list p {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 20px;
+}
 /* Общие стили */
 body {
   background: #eef9fb;
@@ -717,6 +806,12 @@ a {
 }
 a:hover {
   color: #36c6e0;
+}
+.tar {
+  text-align: right;
+}
+.tal {
+  text-align: left;
 }
 /* =================
    header styles
@@ -985,6 +1080,45 @@ a:hover {
   vertical-align: middle;
   background: url(../img/icon-setting.png) no-repeat;
 }
+/* Элементы сортировки */
+.sorting a {
+  font-size: 15px;
+  padding: 7px 17px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 20px;
+}
+.sorting a.current {
+  color: #fff;
+  background: #20b3cd;
+}
+.sorting .icon:before {
+  content: "";
+  width: 16px;
+  height: 20px;
+  margin-right: 7px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/sorting-icons.png) no-repeat;
+}
+.sorting .icon-recom:before {
+  background-position: 0 0;
+}
+.sorting .icon-recom.current:before {
+  background-position: 0 -36px;
+}
+.sorting .icon-checked:before {
+  background-position: -52px 0;
+}
+.sorting .icon-checked.current:before {
+  background-position: -52px -36px;
+}
+.sorting .icon-cancel:before {
+  background-position: -103px 0;
+}
+.sorting .icon-cancel.current:before {
+  background-position: -103px -36px;
+}
 /* Пагинация */
 .pagination {
   padding: 18px 15px 0;
@@ -1020,6 +1154,9 @@ a:hover {
    ================= */
 .main-head {
   margin-bottom: 16px;
+}
+.main-head .lnh {
+  line-height: 35px;
 }
 /* Хлебные крошки */
 .breadcrumbs a {

@@ -124,7 +124,6 @@
 	}
 }
 
-
 /* Расписание */
 .shedule{
 	padding: 4px 5px 8px;
@@ -184,8 +183,6 @@
 		cursor: default;
 	}
 } 
-
-
 
 /* Виджет: рекомендации - иконка */ 
 .widget-head .icon-recomendation:before{
@@ -253,8 +250,8 @@
 	background-position: -103px -91px;
 }
 
-/* Виджет - пульс */ 
 
+/* Виджет - пульс */ 
 .pulse-widget{ padding: 16px; }
 .pulse-info{
 	position: relative;
@@ -327,4 +324,97 @@
 		}
 	}
 }
+
+
+/* Виджет - рекомендации */
+.sidebar-list{
+	height: 100%;
+	padding-right: 0;
+	border-right: 1px solid #f0f0f0;
+}
+
+.recomendations-widget{
+	.complete{
+		.gotham;
+		color: #000;
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.progress-block{
+		width: 290px;
+		padding: 10px 0;
+		display: inline-block;
+		vertical-align: middle;
+		.percent{ width: 80%; }
+	}
+} 
+
+.buttons-block{
+	padding: 14px 0;
+	text-align: center;
+	.row [class*=col-] { padding: 0; }
+	.btn{
+		.gotham-m;
+		font-size: 14px;
+		line-height: 15px;
+		padding: 7px 17px 7px 30px;
+		letter-spacing: -0.2px;
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid #000;
+		border-radius: 20px;
+		&:before{
+			content: "";
+			width: 17px;
+			height: 14px;
+			position: absolute;
+			left: 8px;
+			background: url(../img/buttons-icons.png) no-repeat;
+		}
+		&--check{
+			color: @green-color;
+			border-color: @green-color;
+			&:before{
+				left: 10px;
+				background-position: 0 0;
+			}
+		}
+		&--record{
+			min-width: 190px;
+			color: @blue-color;
+			border-color: @blue-color;
+			&:before{
+				background-position: -43px 0;
+			}
+		}
+		&--cancel{
+			color: @red-color;
+			border-color: @red-color;
+			&:before{
+				background-position: -93px 0;
+			}
+		}
+	}
+}
+
+.description-block{
+	padding: 0 20px!important;
+	.header-list{
+		padding: 25px 0;
+		text-align: center;
+		p{
+			.gotham-m;
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+
+
+
 

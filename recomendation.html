@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Заголовок страницы -->
+    <title>LK-recomendation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="Ключевые слова">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if IE]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Верхняя шапка -->
+    <header class="header">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-2">
+            <a href="index.html" class="header_logo" title="OnDoc">
+              <img src="img/main-logo.png" alt="OnDoc" />
+            </a>
+          </div>
+          <div class="col-7">
+            <a href="#" class="question icon-lamp">С чего начать?</a>
+          </div>
+          <div class="col-3">
+            <div class="profile-menu pull-right">
+              <img src="img/avatar.png" class="avatar" alt="Смирнов Иван" />
+              <a href="#" class="profile-link dropdown-menu-link icon-arrow">Смирнов Иван</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </header>
+
+    <!-- Общий сблок -->
+    <div class="main-page">
+      <div class="container">
+        <div class="row main-row-customize">
+          <aside class="col-2 col-2-cust">
+            <!-- Боковая панель -->
+            <div class="sidebar">
+              <!-- Блок с фото и именем -->
+              <div class="sidebar_profile">
+                <div class="profile-avatar">
+                  <img src="img/big-avatar.png" alt="Смирнов Иван" />
+                </div>
+                <p class="profile-name">Смирнов Иван</p>
+              </div>
+              <!-- Навигация -->
+              <ul class="sidebar_menu">
+                <li class="menu-link current"><a href="index.html" class="icon icon-heart">Состояние здоровья</a></li>
+                <li class="menu-link"><a href="monitoring.html" class="icon icon-monitor">Монитор показателей</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-cart">Медицинская карта</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-data">Медицинские данные</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-doctor">Врачи и клиники</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-bonus">ВитаБонус</a></li>
+              </ul>
+            </div>
+          </aside>
+          <section class="col-10 col-10-cust">
+
+            <div class="main-head row">
+              <div class="breadcrumbs lnh col-4">
+                <a href="index.html" class="back icon-back">Назад</a>
+              </div>
+              <div class="sorting">
+                <a href="#" class="icon icon-recom current">Рекомендации</a>
+                <a href="#" class="icon icon-checked">Выполненные</a>
+                <a href="#" class="icon icon-cancel">Отмененные</a>
+              </div>
+            </div>
+
+            <div class="widget recomendations-widget">
+
+              <div class="widget-head bottom-line">
+                <p class="complete">15 из 20 выполнено</p>
+                <div class="progress-block">
+                  <div class="progress">
+                    <div class="percent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4 sidebar-list">
+                  <div class="widget-list">
+                    <ul>
+                      <li class="list-item bottom-line">
+                        <p class="name">Пройти флюорографию</p>
+                        <p class="data">до 20 августа 2014</p>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <p class="name">Сделать УЗИ органов брюшной полости</p>
+                        <p class="data">до 31 сентября 2014</p>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <p class="name">Пройти вакцинацию против Гриппа</p>
+                        <p class="data">до 1 октября 2014</p>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <p class="name">Сдать анализ крови</p>
+                        <p class="data">до 1 ноября 2014</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-8 description-block">
+                  <div class="buttons-block bottom-line">
+                    <div class="row">
+                      <div class="col-4 tal">
+                        <a href="#" class="btn btn--check">Выполнено</a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" class="btn btn--record">Записаться на прием</a>
+                      </div>
+                      <div class="col-4 tar">
+                        <a href="#" class="btn btn--cancel">Отменить</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-list">
+                    <p>Сделать УЗИ органов брюшной полости</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">OnDoc — система персонального здравоохранения</p>
+      </div>
+    </footer>
+
+    
+    <script src="js/libraries.js" ></script>
+
+    <script>
+
+      $(function(){
+
+        $(".select-list-text").on("click", function(){
+          $(this).parents(".select-list").toggleClass('open');
+        })
+
+        $(".list-drop-item").on("click", function(){
+
+          $(this).parents('.select-list').find(".select-list-text").text($(this).text());
+          $(this).parents('.select-list').find(".select-value").val($(this).attr('data-value'));
+          $(this).parents(".select-list").removeClass('open');
+
+        });       
+        
+      })
+
+      $(".dropdown-menu-link").click(function () {
+        $(".dropdown-menu").toggleClass('display');
+      });
+
+      $(".tabs a").click(function () {
+        $("a").toggleClass('current');
+      });
+
+      $(".exit").click(function () {
+        $(".quiz").css('opacity','0');
+      });
+
+      $('ul.tabs').on('click', 'li:not(.current)', function() {  
+          $(this).addClass('current').siblings().removeClass('current')  
+            .parents('.tabs-section').find('div.graph').eq($(this).index()).fadeIn(150).siblings('div.graph').hide();  
+      });
+
+    </script>
+    
+    
+  </body>
+</html>

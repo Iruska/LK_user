@@ -11,6 +11,9 @@ a{
 	}
 }
 
+.tar{ text-align: right; }
+.tal{ text-align: left; }
+
 
 
 /* =================
@@ -276,8 +279,44 @@ a{
 }
 
 
-/* Пагинация */
+/* Элементы сортировки */ 
+.sorting{
+	a{
+		font-size: 15px;
+		padding: 7px 17px;
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 20px;
 
+		&.current{
+			color: #fff;
+			background: @blue-color;
+		}
+	}
+	.icon:before{
+		content: "";
+		width: 16px;
+		height: 20px;
+		margin-right: 7px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/sorting-icons.png) no-repeat;
+	}
+	.icon-recom{
+		&:before{ background-position: 0 0; }
+		&.current:before{ background-position: 0 -36px; }
+	}
+	.icon-checked{
+		&:before{ background-position: -52px 0; }
+		&.current:before{ background-position: -52px -36px; }
+	}
+	.icon-cancel{
+		&:before{ background-position: -103px 0; }
+		&.current:before{ background-position: -103px -36px; }
+	}
+}
+
+/* Пагинация */
 .pagination{
 	padding: 18px 15px 0;
 	.customize-select{
@@ -312,6 +351,7 @@ a{
 
 .main-head{
 	margin-bottom: 16px;
+	.lnh{ line-height: 35px; }
 }
 
 /* Хлебные крошки */
