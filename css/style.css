@@ -455,8 +455,15 @@ a {
 .widget-list .list-item {
   cursor: pointer;
   padding: 18px 0 17px;
-  background: url(../img/list-arrow.png) no-repeat;
+  background-image: url(../img/list-arrow.png);
+  background-repeat: no-repeat;
   background-position: 92% 50%;
+}
+.widget-list .list-item.active {
+  background-color: #e8f6fa;
+}
+.widget-list .list-item.active:hover p {
+  color: #000;
 }
 .widget-list .list-item p {
   padding: 0 30px 0 20px;
@@ -712,12 +719,11 @@ a {
   font-size: 10px;
   color: rgba(0, 0, 0, 0.5);
 }
-/* Виджет - рекомендации */
+/* Виджет - рекомендации - сайдбар */
 .sidebar-list {
-  height: 100%;
   padding-right: 0;
-  border-right: 1px solid #f0f0f0;
 }
+/* Стилизация виджета рекомендации */
 .recomendations-widget .complete {
   font-family: 'Gotham', Arial, sans-serif;
   color: #000;
@@ -734,6 +740,7 @@ a {
 .recomendations-widget .progress-block .percent {
   width: 80%;
 }
+/* Стилизация кнопок */
 .buttons-block {
   padding: 14px 0;
   text-align: center;
@@ -753,6 +760,9 @@ a {
   vertical-align: middle;
   border: 1px solid #000;
   border-radius: 20px;
+}
+.buttons-block .btn:hover {
+  opacity: 0.6;
 }
 .buttons-block .btn:before {
   content: "";
@@ -785,16 +795,138 @@ a {
 .buttons-block .btn--cancel:before {
   background-position: -93px 0;
 }
+/* Страница рекомендаций - оформление информации */
 .description-block {
-  padding: 0 20px!important;
+  padding: 0 19px 25px!important;
+  border-left: 1px solid #f0f0f0
+  /* Большой заголовок */
+  /* Серый подзаголовок с линий */
 }
 .description-block .header-list {
-  padding: 25px 0;
-  text-align: center;
-}
-.description-block .header-list p {
   font-family: 'Gotham-Medium', Arial, sans-serif;
   font-size: 20px;
+  margin: 25px 0;
+  text-align: center;
+}
+.description-block .head-line {
+  z-index: 0;
+  margin: 18px 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  color: rgba(0, 0, 0, 0.5)
+  /* множественный подзаголовок */
+}
+.description-block .head-line--three div:first-child span {
+  padding-left: 0;
+}
+.description-block .head-line--three div:last-child span {
+  padding-right: 0;
+}
+.description-block .head-line:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1);
+}
+.description-block .head-line span {
+  padding: 0 20px;
+  background: #fff;
+}
+.description-block p,
+.description-block span,
+.description-block li {
+  font-size: 14px;
+}
+.description-block p {
+  margin-bottom: 20px;
+}
+.description-block .time {
+  text-align: center;
+}
+.description-block .date {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 14px;
+}
+.description-block .icon-date:after {
+  top: -2px;
+  content: "";
+  width: 15px;
+  height: 16px;
+  margin-left: 8px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-date.png) no-repeat;
+}
+.description-block .important-list {
+  padding-left: 15px;
+}
+.description-block .important-list li {
+  margin: 10px 0;
+  list-style-type: disc;
+}
+.description-block .risk-list {
+  padding-left: 15px;
+}
+.description-block .risk-list li {
+  list-style-type: disc;
+}
+.description-block .list {
+  text-align: center;
+}
+.description-block .diagnosis p {
+  padding-right: 10px;
+}
+.description-block .training {
+  text-align: center;
+}
+.description-block .clinic-title {
+  display: block;
+  padding-left: 58px;
+  position: relative;
+  background-image: url(../img/list-arrow.png);
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+}
+.description-block .clinic-title:hover * {
+  color: #dc4531;
+}
+.description-block .clinic-title p {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  color: #000;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+.description-block .clinic-title span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.description-block .clinic-title span:before {
+  content: "";
+  width: 10px;
+  height: 12px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-map.png) no-repeat;
+}
+.description-block .clinic-title:before {
+  content: "";
+  width: 46px;
+  height: 47px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/icon-clinic.png) no-repeat;
 }
 /* Общие стили */
 body {
@@ -806,6 +938,12 @@ a {
 }
 a:hover {
   color: #36c6e0;
+}
+.to-left {
+  float: left;
+}
+.to-right {
+  float: right;
 }
 .tar {
   text-align: right;
@@ -1170,7 +1308,7 @@ a:hover {
 .breadcrumbs .back {
   font-family: 'Gotham-Medium', Arial, sans-serif;
   font-size: 15px;
-  padding-left: 25px;
+  padding-left: 5px;
 }
 .breadcrumbs .icon-back:before {
   content: "";
