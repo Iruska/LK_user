@@ -359,9 +359,6 @@ p {
   font-family: 'Gotham', Arial, sans-serif;
   font-size: 16px;
 }
-a {
-  line-height: 21px;
-}
 /* Общие стили виджета */
 .widget {
   background: #fff;
@@ -459,6 +456,9 @@ a {
   background-repeat: no-repeat;
   background-position: 92% 50%;
 }
+.widget-list .list-item a {
+  display: block;
+}
 .widget-list .list-item.active {
   background-color: #e8f6fa;
 }
@@ -466,6 +466,7 @@ a {
   color: #000;
 }
 .widget-list .list-item p {
+  color: #000;
   padding: 0 30px 0 20px;
   transition: 0.2s ease color;
 }
@@ -1201,7 +1202,7 @@ a:hover {
    ================= */
 /* Настроить блоки */
 .settings {
-  padding: 10px 0;
+  padding: 14px 0;
   text-align: center;
 }
 .settings a {
