@@ -448,6 +448,78 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.widget .widget-content {
+  position: relative;
+}
+.widget .description {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: none;
+}
+.widget .description.current {
+  display: block;
+}
+.widget .description .add-block {
+  margin-bottom: 40px;
+}
+.widget .description .add-block p {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 14.5px;
+  margin-bottom: 14px;
+}
+.widget .description .add-block .date {
+  font-size: 13px;
+}
+.widget .description .add-block .date:after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(../img/arrow-down.png) no-repeat;
+}
+.widget .description .indication-value {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  width: 60px;
+  margin: 10px auto;
+  font-size: 22px;
+  line-height: 20px;
+  display: block;
+  padding: 6px 10px 4px;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.widget .description .indication p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.widget .description .buttons {
+  width: 100%;
+  padding: 0 24px;
+  position: absolute;
+  bottom: 0;
+}
+.widget .description .buttons .exit,
+.widget .description .buttons .okey {
+  width: 40px;
+  height: 40px;
+  display: block;
+  font-size: 0;
+  background: url(../img/exit-okey-sprite.png) no-repeat;
+}
+.widget .description .buttons .okey {
+  background-position: -88px 0;
+}
 /* Оформление листа */
 .widget-list .list-item {
   cursor: pointer;

@@ -74,37 +74,59 @@
               <div class="col-4">
                 <div class="widget widget--mini">
                   <div class="widget-head bottom-line">
-                    <p class="icon icon-pulse">Пульс <a href="monitoring-in.html" class="plus"></a></p>
+                    <p class="icon icon-pulse">Пульс <a href="#" class="plus"></a></p>
                   </div>
-                  <div class="date-block clearfix">
-                    <div class="month pull-left">
-                      <form action="" method="">
-                        <div class="select-list">
-                          <div class="select-list-text">Месяц</div>
-                          <input type="hidden" class="select-value" name="select-value" value="0" />
-                          <ul class="list-drop">
-                            <li class="list-drop-item" data-value='1'>Январь</li>
-                            <li class="list-drop-item" data-value='2'>Февраль</li>
-                            <li class="list-drop-item" data-value='3'>Март</li>
-                            <li class="list-drop-item" data-value='4'>Апрель</li>
-                            <li class="list-drop-item" data-value='5'>Март</li>
-                            <li class="list-drop-item" data-value='6'>Май</li>
-                            <li class="list-drop-item" data-value='7'>Июнь</li>
-                            <li class="list-drop-item" data-value='8'>Июль</li>
-                            <li class="list-drop-item" data-value='9'>Август</li>
-                            <li class="list-drop-item" data-value='10'>Сентябрь</li>
-                            <li class="list-drop-item" data-value='11'>Октябрь</li>
-                            <li class="list-drop-item" data-value='12'>Декабрь</li>
-                          </ul>
+                  
+                  <div class="widget-content">
+                    <div class="date-block clearfix">
+                      <div class="month pull-left">
+                        <form action="" method="">
+                          <div class="select-list">
+                            <div class="select-list-text">Месяц</div>
+                            <input type="hidden" class="select-value" name="select-value" value="0" />
+                            <ul class="list-drop">
+                              <li class="list-drop-item" data-value='1'>Январь</li>
+                              <li class="list-drop-item" data-value='2'>Февраль</li>
+                              <li class="list-drop-item" data-value='3'>Март</li>
+                              <li class="list-drop-item" data-value='4'>Апрель</li>
+                              <li class="list-drop-item" data-value='5'>Март</li>
+                              <li class="list-drop-item" data-value='6'>Май</li>
+                              <li class="list-drop-item" data-value='7'>Июнь</li>
+                              <li class="list-drop-item" data-value='8'>Июль</li>
+                              <li class="list-drop-item" data-value='9'>Август</li>
+                              <li class="list-drop-item" data-value='10'>Сентябрь</li>
+                              <li class="list-drop-item" data-value='11'>Октябрь</li>
+                              <li class="list-drop-item" data-value='12'>Декабрь</li>
+                            </ul>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="date pull-right">
+                        <p>21/05/2014 - 21/06/2014</p>
+                      </div>
+                    </div>
+                    <div class="timetable">
+                      <img src="img/mini-graph.png" alt="">
+                    </div>
+
+                    <div class="description">
+                      <form action="">
+                        <div class="add-block">
+                          <p>Добавить показание</p>
+                          <a href="#" class="date">21/05/2014</a>
                         </div>
+                        <div class="indication">
+                          <input type="text" class="indication-value" value="115" />
+                          <p>уд/мин</p>
+                        </div>
+                        <div class="buttons clearfix">
+                          <a href="#" class="exit to-left">Отмена</a>
+                          <a href="#" class="okey to-right">Ок</a>
+                        </div>
+
                       </form>
                     </div>
-                    <div class="date pull-right">
-                      <p>21/05/2014 - 21/06/2014</p>
-                    </div>
-                  </div>
-                  <div class="timetable">
-                    <img src="img/mini-graph.png" alt="">
+
                   </div>
                 </div>
               </div>
@@ -373,6 +395,16 @@
 
       $(".tabs a").click(function () {
         $("a").toggleClass('current');
+      });
+
+      $(".widget .plus").click(function () {
+        $(".description").addClass('current');
+        $(this).css('display', 'none');
+      });
+
+      $(".widget .exit").click(function () {
+        $(".description").removeClass('current');
+        $(".widget .plus").css('display', 'inherit');
       });
 
       $(".exit").click(function () {
