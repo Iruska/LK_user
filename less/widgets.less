@@ -66,6 +66,7 @@
 	.timetable{
 		padding: 0 20px;
 		text-align: center;
+		// min-height: 250px;
 		img{ width: 100%; margin: 0 auto; }
 	}
 	.widget-content{
@@ -80,11 +81,33 @@
 		top: 0; left: 0;
 		background: #fff;
 		display: none;
+
+		.views{
+			width: 73%;
+			padding: 8px 0 10px;
+			margin: 0 auto;
+		}
+
+		&.min-padding{ padding-top: 30px; }
+
+		.inline-column{
+			margin: 0 10px;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			&.slash:after{
+				content: "/";
+				font-size: 21px;
+				position: absolute;
+				top: 27%; right: -19px;
+			}
+		}
 		
 		&.current{ display: block; }
 
 		.add-block{
-			margin-bottom: 40px;
+			margin-bottom: 37px;
+			&.min-margin{ margin-bottom: 15px; }
 			p{
 				.gotham-m;
 				font-size: 14.5px;
@@ -108,18 +131,38 @@
 			&-value{
 				.gotham-m;
 				width: 60px;
+				position: relative;
 				margin: 10px auto;
 				font-size: 22px;
 				line-height: 20px;
 				display: block;
-				padding: 6px 10px 4px;
+				padding: 7px 0 4px;
 				border-radius: 3px;
 				text-align: center;
 				border: 1px solid #ccc;
 			}
+			&--inline{
+				.indication-value{
+					width: 40px;
+					margin: 10px 3px;
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
 			p{
 				font-size: 14px;
 				color: rgba(0,0,0,0.6);
+			}
+			.comma{
+				font-size: 22px;
+				position: relative;
+				bottom: -20px;
+			}
+			.degree{
+				vertical-align: top;
+				display: inline-block;
+				position: relative;
+				top: 18px;
 			}
 		}
 		.buttons{
@@ -133,13 +176,9 @@
 				display: block;
 				font-size: 0;
 				background: url(../img/exit-okey-sprite.png) no-repeat;
+				&:hover{ opacity: 0.7; }
 			}
-			.exit{
-				
-			}
-			.okey{
-				background-position: -88px 0;
-			}
+			.okey{ background-position: -88px 0; }
 		}
 	}
 }
