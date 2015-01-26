@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Заголовок страницы -->
+    <title>LK-recomendation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="Ключевые слова">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if IE]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Верхняя шапка -->
+    <header class="header">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-2">
+            <a href="index.html" class="header_logo" title="OnDoc">
+              <img src="img/main-logo.png" alt="OnDoc" />
+            </a>
+          </div>
+          <div class="col-7">
+            <a href="#" class="question icon-lamp">С чего начать?</a>
+          </div>
+          <div class="col-3">
+            <div class="profile-menu pull-right">
+              <img src="img/avatar.png" class="avatar" alt="Смирнов Иван" />
+              <a href="#" class="profile-link dropdown-menu-link icon-arrow">Смирнов Иван</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </header>
+
+    <!-- Общий сблок -->
+    <div class="main-page">
+      <div class="container">
+        <div class="row main-row-customize">
+          <aside class="col-2 col-2-cust">
+            <!-- Боковая панель -->
+            <div class="sidebar">
+              <!-- Блок с фото и именем -->
+              <div class="sidebar_profile">
+                <div class="profile-avatar">
+                  <img src="img/big-avatar.png" alt="Смирнов Иван" />
+                </div>
+                <p class="profile-name">Смирнов Иван</p>
+              </div>
+              <!-- Навигация -->
+              <ul class="sidebar_menu">
+                <li class="menu-link current"><a href="index.html" class="icon icon-heart">Состояние здоровья</a></li>
+                <li class="menu-link"><a href="monitoring.html" class="icon icon-monitor">Монитор показателей</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-cart">Медицинская карта</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-data">Медицинские данные</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-doctor">Врачи и клиники</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-bonus">ВитаБонус</a></li>
+              </ul>
+            </div>
+          </aside>
+          <section class="col-10 col-10-cust">
+
+            <div class="main-head row">
+              <div class="breadcrumbs lnh col-3">
+                <a href="index.html" class="back icon-back">Назад</a>
+              </div>
+              <!-- Блок сортировки -->
+              <div class="sorting col-9">
+                <a href="#" class="icon icon-course current">Текущий курс</a>
+                <a href="#" class="icon icon-history">История курсов</a>
+                <a href="#" class="icon icon-directory">Справочник лекарств</a>
+              </div>
+            </div>
+
+            <div class="widget recomendations-widget">
+              <!-- Верхняя плашка -->
+              <div class="widget-head bottom-line">
+                <p class="complete">15 / <span class="grey-color">20 дн. курса</span></p>
+                <div class="progress-block">
+                  <div class="progress">
+                    <div class="percent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Сайдбар с табами -->
+                <div class="col-4 sidebar-list">
+                  <div class="widget-list">
+                    <ul>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="name">Мезим</p>
+                          <p class="time">
+                            <span class="current">16:00</span>
+                            <span>21:00</span>
+                          </p>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="name">Ноотропил</p>
+                          <p class="time">
+                            <span>9:00</span>
+                            <span class="current">15:00</span>
+                            <span>21:00</span>
+                          </p>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="name">Валидол</p>
+                          <p class="time">
+                            <span class="current">10:00</span>
+                            <span>21:00</span>
+                          </p>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="name">Смекта</p>
+                          <p class="time">
+                            <span>9:00</span>
+                            <span class="current">15:00</span>
+                            <span>21:00</span>
+                          </p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Блок описания -->
+                <div class="col-8 description-block">
+                  <div class="bottom-line">
+  
+                    <p class="header-list">Мезим <span>(таблетки)</span></p>
+                    
+                    <section class="reception">
+                      <div class="head-line"><span>Время приема</span></div>
+                      <p>3 раза в день</p>
+                      <div class="row">
+                        <div class="col-4 reception-time tal">
+                          <span>9:00</span>
+                          <span>10 мг</span>
+                        </div>
+                        <div class="col-4 reception-time tac">
+                          <span>15:00</span>
+                          <span>10 мг</span>
+                        </div>
+                        <div class="col-4 reception-time tar">
+                          <span>20:00</span>
+                          <span>10 мг</span>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="reception">
+                      <div class="head-line"><span>Дни приема</span></div>
+                      <p class="reception-day active">ПН</p>
+                      <p class="reception-day active">ВТ</p>
+                      <p class="reception-day active">СР</p>
+                      <p class="reception-day active">ЧТ</p>
+                      <p class="reception-day active">ПТ</p>
+                      <p class="reception-day">СБ</p>
+                      <p class="reception-day">ВС</p>
+                    </section>
+
+                    <section class="reception">
+                      <div class="head-line"><span>Длительность курса</span></div>
+                      <p>21 день / <span class="grey-color">19 августа 2014 — 10 сентября 2014</span></p>
+                    </section>
+
+                    <section class="reception">
+                      <div class="head-line"><span>Рекомендации</span></div>
+                      <p>Принимать через 15 минут после еды.</p>
+                    </section>
+
+                    <section class="">
+                      <div class="head-line"><span>Назначен врач</span></div>
+                      <div class="doctor">
+                        <div class="row">
+                          <div class="col-4">
+                             <img src="img/img-doctor.png" class="avatar" alt="" />
+                          </div>
+                          <div class="col-8">
+                            <a href="#">Сергеев В. И.</a>
+                            <p>Гастроэнтеролог</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="head-line"><span>Диагноз</span></div>
+                      <p>Поверхностный дуоденит двенадцатиперстной кишки на фоне заброса желчи в пищевод</p>
+                    </section>
+
+                    <section class="reactions-block">
+                      <div class="head-line"><span>Реакция на препарат</span></div>
+                      <a href="#" class="reaction reaction-okey popup-link">
+                        <div class="popup">
+                          <p class="reaction reaction-okey active">Хорошая</p>
+                          <p class="reaction reaction-side">Побочные действия</p>
+                          <p class="reaction reaction-know">Не знаю</p>
+                          <p class="reaction reaction-prohibited">Противопоказан</p>
+                        </div>
+                      </a>
+                    </section>
+
+                    <section class="comment-block">
+                      <div class="head-line"><span>Комментарии</span></div>
+                      <div class="comment">
+                        <p>Повысилась температура после приема, упала только вечером.</p>
+                        <span class="date">19.05.2014</span>
+                      </div>
+                      <div class="comment">
+                        <p>На пятый день все нормализовалось.</p>
+                        <span class="date">26.05.2014</span>
+                      </div>
+                      <form action="">
+                        <input type="text" placeholder="Текст комментария" class="field-comment">
+                      </form>
+                    </section>
+        
+                  </div>
+
+                  <section class="buttons-block">
+                    <form action="">
+                      <input type="button" class="btn btn-icon btn-edit" value="Редактировать"/>
+                      <input type="button" class="btn btn-icon btn-delete" value="Удалить"/>
+                    </form>
+                  </section>
+
+                </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">OnDoc — система персонального здравоохранения</p>
+      </div>
+    </footer>
+
+    
+    <script src="js/libraries.js" ></script>
+
+    <script>
+
+      $(function(){
+
+        $(".select-list-text").on("click", function(){
+          $(this).parents(".select-list").toggleClass('open');
+        })
+
+        $(".list-drop-item").on("click", function(){
+
+          $(this).parents('.select-list').find(".select-list-text").text($(this).text());
+          $(this).parents('.select-list').find(".select-value").val($(this).attr('data-value'));
+          $(this).parents(".select-list").removeClass('open');
+
+        });       
+        
+      })
+
+      $(".dropdown-menu-link").click(function () {
+        $(".dropdown-menu").toggleClass('display');
+      });
+
+      $(".tabs a").click(function () {
+        $("a").toggleClass('current');
+      });
+
+      $(".exit").click(function () {
+        $(".quiz").css('opacity','0');
+      });
+
+      $('ul.tabs').on('click', 'li:not(.current)', function() {  
+          $(this).addClass('current').siblings().removeClass('current')  
+            .parents('.tabs-section').find('div.graph').eq($(this).index()).fadeIn(150).siblings('div.graph').hide();  
+      });
+
+    </script>
+    
+    
+  </body>
+</html>
