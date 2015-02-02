@@ -27,6 +27,7 @@
 				&:hover{ opacity: 0.6; }
 			}
 		}
+		&--grey p{ color: rgba(0,0,0,.9); }
 		.icon:before{
 			content: "";
 			margin-right: 6px;
@@ -280,55 +281,45 @@
 				background: url(../img/reaction-prohibited.png) no-repeat;
 			}
 		}
-
-		.popup-link{
-			position: relative;
-			&:hover .popup{ display: inherit; }
+	}
+	/* Лекарства */ 
+	.medicine{
+		a{
+			.gotham;
+			margin: 12px 0 5px;
+			display: block;
+			font-size: 14px;
+			opacity: 0.9;
 		}
-
-		.popup{
-			width: 194px;
-			cursor: default;
-			background: #fff;
-			text-align: left;
-			padding: 22px 15px;
-			border-radius: 15px;	
-			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-			position: absolute;
-			right: -194px; top: 50%;
-			transform: translateY(-50%);
-			z-index: 100;
-			display: none;
-			
-			&:before{
-				content: "";
-				width: 7px;
-				height: 18px;
-				position: absolute;
-				left:-7px; top: 50%;
-				transform: translateY(-50%);
-				background: url(../img/triangle.png) no-repeat;
-			}
+		span{
+			font-size: 11px;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: top;
+			color: rgba(0,0,0,.6);
 		}
-
 	}
 }
 
+
 /* Оформление листа */ 
 .widget-list{
+
 	.list-item{
 		cursor: pointer;
 		padding: 18px 32px 17px 0px;
 		background-image: url(../img/list-arrow.png);
 		background-repeat: no-repeat;
 		background-position: 92% 50%;
+		&:hover{
+			background-color: #e8f6fa;
+		}
+
 		a{ display: block; }
 
 		&.active{
 			background-color: #e8f6fa;
-			&:hover p{
-				color: #000;
-			}
+			&:hover p{ color: #000; }
 		}
 
 		p{ 
@@ -336,7 +327,7 @@
 			padding: 0 30px 0 20px; 
 			transition: 0.2s ease color;
 		}
-		.name{ 
+		.name, .doc{ 
 			.gotham-m; 
 			margin-bottom: 4px;
 		}
@@ -360,6 +351,40 @@
 		}
 		&:hover .name, &:hover .data, &:hover .event {
 			color: @red-color;
+		}
+		.desc{
+			.gotham;
+			font-size: 14px;
+			padding: 3px 0 0 20px;
+			color: rgba(0,0,0,.9); 
+		}
+		.address-date{
+			padding: 15px 0 0 20px;
+			span{
+				.gotham;
+				font-size: 11px;
+				color: rgba(0,0,0,.6);
+				&:before{
+					content: "";
+					width: 16px;
+					height: 15px;
+					display: inline-block;
+					vertical-align: middle;
+					background: url(../img/address-date-icons.png) no-repeat;
+				}
+			}
+			.address{
+				background-position: 0 -2px;
+			}
+			.date:before{
+				background-position: -34px -1px;
+			}
+		}
+	}
+	&--noarrow{
+		.list-item{
+			background: none;
+			padding: 17px 15px 13px 0px;
 		}
 	}
 }
@@ -447,7 +472,7 @@
 
 /* Виджет: текущий курс - иконка */ 
 .widget-head .icon-course:before{
-	width: 14px;
+	width: 15px;
 	height: 20px;
 	background-position: -47px -6px;
 }
@@ -457,7 +482,7 @@
 
 /* Виджет: события - иконка */ 
 .widget-head .icon-event:before{
-	width: 20px;
+	width: 21px;
 	height: 20px;
 	background-position: -93px -6px;
 }
@@ -504,6 +529,13 @@
 	background-position: -103px -91px;
 }
 
+/* Страница консультаций - иконка */ 
+.widget-head .icon-consult:before{
+	width: 15px;
+	height: 22px;
+	position: relative; top: -1px;
+	background: url(../img/icon-consult.png) no-repeat;
+}
 
 /* Виджет - пульс */ 
 .pulse-widget{ padding: 16px; }
@@ -776,6 +808,119 @@
 	}
 }
 
+/* Блок с описанием врача */
+.medic-block{
+	position: relative;
+	
+	img{
+		width: 46px;
+		height: 46px;
+	}
+	&-name{
+		.name{
+			.gotham-m;
+			margin: 6px 0;
+			display: block;
+			font-size: 14px;
+			color: @blue-color;
+		}
+		p{
+			font-size: 12px;
+			color: rgba(0,0,0,.6);
+		}
+	}
+	&-date p{
+		font-size: 12px;
+		color: rgba(0,0,0,.6);
+		position: absolute;
+		bottom: 0;
+	}
+	.icon-academy:before{
+		content: "";
+		width: 20px;
+		height: 15px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-academy.png) no-repeat;
+	}
+	.icon-calendar:before {
+		content: "";
+		width: 16px;
+		height: 15px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/address-date-icons.png) no-repeat;
+	}
+} 
+
+.medic-block-name{ position: relative; }
+.popup.medic-block-popup{
+	width: 302px;
+	top: -103px;
+	left: 190px;
+	padding: 22px 0;
+	// display: inherit;
+	text-align: center;
+	transform: translate(0);
+	&:before{ top: 110px; }
+
+	.avatar{
+		img{
+			width: 111px;
+			height: 111px;
+			padding: 3px;
+			box-shadow: 0 0 0 1px #ccc;
+			border-radius: 50%;
+		}
+	}
+	.medic-block-head{
+		.gotham-m;
+		color: #000;
+		font-size: 16px;
+		line-height: 20px;
+		margin: 10px 0 5px;
+	}
+	.medic-block-desc{
+		font-size: 12px;
+	}
+	.head-line span{ 
+		.gotham;
+		padding: 0 10px;
+		font-size: 14px;
+		color: rgba(0,0,0,.5); 
+	}
+	section{
+		padding: 0 20px;
+		text-align: left;
+		p{
+			font-size: 12px;
+			margin: 2px 0;
+			color: rgba(0,0,0,.9);
+		}
+		a{ display: inline-block; }
+	}
+	.section-phone{ text-align: center; }
+	.icon-doctor:before,
+	.icon-age:before{
+		content: "";
+		width: 13px;
+		height: 15px;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-age-doctor.png) no-repeat;
+	}
+
+	.icon-doctor:before{
+		background-position: 1px 1px;
+	}
+	.icon-age:before{
+		background-position: 2px -20px;
+	}
+}
+
+
+
 /* Настройка виджетов */
 
 .settings-block{
@@ -956,4 +1101,33 @@
 	}
 }
 
+/* Стили для поп-апа */ 
+.popup-link{
+	position: relative;
+	&:hover .popup{ display: inherit; }
+}
 
+.popup{
+	width: 194px;
+	cursor: default;
+	background: #fff;
+	text-align: left;
+	padding: 22px 15px;
+	border-radius: 15px;	
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	position: absolute;
+	right: -194px; top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	display: none;
+	
+	&:before{
+		content: "";
+		width: 7px;
+		height: 18px;
+		position: absolute;
+		left:-7px; top: 50%;
+		transform: translateY(-50%);
+		background: url(../img/triangle.png) no-repeat;
+	}
+}

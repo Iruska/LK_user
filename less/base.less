@@ -328,7 +328,25 @@ a{
 		&:before{ background-position: -257px 0; }
 		&.current:before{ background-position: -257px -36px; }
 	}
+	.icon-filter{
+		position: relative;
+		&:before{ 
+			position: absolute;
+			left: -20px; top: 50%;
+			transform: translateY(-50%);
+			background-position: -301px 4px; 
+		}
+	}
+
+	/* Фильтр */
+	.select-list-filter{
+		line-height: 35px;
+		margin-left: 26%;
+		.list-drop{ min-width: 100px; }
+	}
 }
+
+
 
 /* Пагинация */
 .pagination{

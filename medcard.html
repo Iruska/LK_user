@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Заголовок страницы -->
+    <title>Консультации</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="Ключевые слова">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if IE]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Верхняя шапка -->
+    <header class="header">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-2">
+            <a href="index.html" class="header_logo" title="OnDoc">
+              <img src="img/main-logo.png" alt="OnDoc" />
+            </a>
+          </div>
+          <div class="col-7">
+            <a href="#" class="question icon-lamp">С чего начать?</a>
+          </div>
+          <div class="col-3">
+            <div class="profile-menu pull-right">
+              <img src="img/avatar.png" class="avatar" alt="Смирнов Иван" />
+              <a href="#" class="profile-link dropdown-menu-link icon-arrow">Смирнов Иван</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </header>
+
+    <!-- Общий сблок -->
+    <div class="main-page">
+      <div class="container">
+        <div class="row main-row-customize">
+          <aside class="col-2 col-2-cust">
+            <!-- Боковая панель -->
+            <div class="sidebar">
+              <!-- Блок с фото и именем -->
+              <div class="sidebar_profile">
+                <div class="profile-avatar">
+                  <img src="img/big-avatar.png" alt="Смирнов Иван" />
+                </div>
+                <p class="profile-name">Смирнов Иван</p>
+              </div>
+              <!-- Навигация -->
+              <ul class="sidebar_menu">
+                <li class="menu-link"><a href="index.html" class="icon icon-heart">Состояние здоровья</a></li>
+                <li class="menu-link"><a href="monitoring.html" class="icon icon-monitor">Монитор показателей</a></li>
+                <li class="menu-link current"><a href="medcard.html" class="icon icon-cart">Медицинская карта</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-data">Медицинские данные</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-doctor">Врачи и клиники</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-bonus">ВитаБонус</a></li>
+              </ul>
+            </div>
+          </aside>
+          <section class="col-10 col-10-cust">
+
+            <div class="main-head row">
+              <div class="breadcrumbs lnh col-3">
+                <a href="index.html" class="back icon-back">Назад</a>
+              </div>
+              <!-- Блок сортировки -->
+              <div class="sorting col-9">
+                <div class="select-list select-list-filter">
+                  <div class="select-list-text icon icon-filter">Фильтр</div>
+                  <input type="hidden" class="select-value" name="select-value" value="0" />
+                  <ul class="list-drop">
+                    <li class="list-drop-item" data-value='1'>Фильтр 1</li>
+                    <li class="list-drop-item" data-value='2'>Фильтр 2</li>
+                    <li class="list-drop-item" data-value='3'>Фильтр 3</li>
+                    <li class="list-drop-item" data-value='4'>Фильтр 4</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="widget recomendations-widget">
+              <!-- Верхняя плашка -->
+              <div class="widget-head widget-head--grey bottom-line">
+                <p class="icon icon-consult">
+                  Консультации
+                  <a href="#" class="plus">+</a>
+                </p>
+              </div>
+
+              <div class="row">
+                <!-- Сайдбар с табами -->
+                <div class="col-4 sidebar-list">
+                  <div class="widget-list widget-list--noarrow">
+                    <ul>
+                      <li class="list-item active bottom-line">
+                        <a href="#">
+                          <p class="doc">Гастроэнтеролог</p>
+                          <p class="desc">Дискинезия желчевыводящих путей</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">ЛОР</p>
+                          <p class="desc">Острый ринит и аллергический отек</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">Невролог</p>
+                          <p class="desc">Воспаление узла коленца</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">Терапевт</p>
+                          <p class="desc">Дискинезия желчевыводящих путей</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">Гастроэнтеролог</p>
+                          <p class="desc">Дискинезия желчевыводящих путей</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">ЛОР</p>
+                          <p class="desc">Острый ринит и аллергический отек</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">Невролог</p>
+                          <p class="desc">Воспаление узла коленца</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-item bottom-line">
+                        <a href="#">
+                          <p class="doc">Невролог</p>
+                          <p class="desc">Воспаление узла коленца</p>
+                          <div class="address-date row">
+                            <span class="address to-left">СМТ клиника</span>
+                            <span class="date to-right">19.05.2014</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Блок описания -->
+                <div class="col-8 description-block">
+                  <div class="bottom-line">
+  
+                    <p class="header-list">Гастроэнтеролог</p>
+
+                    <section class="medic-block">
+                      <div class="row">
+                        <div class="col-1">
+                          <img src="img/medic.png" alt="Врач">
+                        </div>
+                        <div class="medic-block-name col-9">
+                          <div class="name popup-link">
+                            Сергеев Владимир Иванович
+
+                            <div class="medic-block-popup popup">
+                              <a href="#" class="star"></a>
+                              <div class="avatar"><img src="img/big-medic.png" alt="Врач"></div>
+                              <p class="medic-block-head">Сергеев<br/> Владимир Иванович</p>
+                              <p class="medic-block-desc">Гастроэнтеролог, Физиотерапевт</p>
+                            
+                              <section>
+                                <div class="head-line"><span>Опыт</span></div>
+                                <p class="icon-doctor">Врач высшей категории</p>
+                                <p class="icon-age">20 лет стаж</p>
+                              </section>
+                              
+                              <section class="section-phone">
+                                <div class="head-line"><span>Телефон</span></div>
+                                <a href="#">+7 (920) 674-43-34</a>
+                              </section>
+                              
+                              <section>
+                                <div class="head-line"><span>Места приема</span></div>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <p>Будь здоров</p>
+                                      <p>Горьковская</p>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <p>СМТ</p>
+                                      <p>Невский проспект</p>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </section>
+                              
+                              <section>
+                                <div class="head-line"><span>О специалисте</span></div>
+                                <p>Орден Правительства РФ за выдающиеся заслуги в области гинекологии (2010 г.)</p>
+                                <p>Один из авторитетнейших специалистов России в области лечения миомы матки, основоположник методики Эмболизация миомы матки на территории СНГ.</p>
+                              </section>
+
+                              <section class="row">
+                                <p>Разрешить просмотр моего профиля</p>
+                                <form action="">
+                                  <label for=""><input type="checkbox" /></label>
+                                </form>
+                              </section>
+
+                              <section>
+                                <p>Есть поддержка мед. карты OnDoc</p>
+                              </section>
+
+                            </div>
+
+                          </div>
+
+                          <p class="icon-academy">Военно-медицинская академия имени Мечникова</p>
+                        </div>
+                        <div class="medic-block-date col-2">
+                          <p class="icon-calendar">19.05.2014</p>
+                        </div>
+                      </div>
+                    </section>
+                    
+                    <section>
+                      <div class="head-line"><span>Жалобы или симптомы</span></div>
+                      <p>Боли в области желудка во время и после приема пищи.</p>
+                    </section>
+
+                    <section>
+                      <div class="head-line"><span>Диагноз</span></div>
+                      <p>Эритематрозная гастронатия. Эрозивный дуоденит. Деформация луковицы ДНК.</p>
+                    </section>
+
+                    <section>
+                      <div class="head-line"><span>?</span></div>
+                      <p>Слизистая луковицы ДНК отечна, на всех стенах острая эррозия с красным дном, по наружной стенке умеренная деформация.</p>
+                    </section>
+
+                    <section>
+                      <div class="head-line"><span>Рекомендации врача</span></div>
+                      <p>Отказаться от жирной и острой пищи, употребления алкоголя на время лечения.</p>
+                    </section>
+
+                    <section>
+                      <div class="head-line"><span>Назначенные лекарства</span></div>
+                      <div class="medicine">
+                        <a href="#">Мезим</a>
+                        <span>10 мг</span>
+                        <span>3 р/д</span>
+                        <span>18 дн</span>
+                        <span>ПН, СР, ПТ</span>
+                      </div>
+                      <div class="medicine">
+                        <a href="#">Мотилиум</a>
+                        <span>10 мг</span>
+                        <span>3 р/д</span>
+                        <span>18 дн</span>
+                        <span>ПН - ВС</span>
+                      </div>
+                    </section>
+
+                    <section class="reception">
+                      <div class="head-line"><span>Повторный визит</span></div>
+                      <a href="#" class="date icon-date">19.05.2014</a>
+                    </section>
+
+                    <section>
+                      <div class="head-line"><span>Заметки</span></div>
+                      <p>Врач понравился, хороший специалист.</p>
+                    </section>
+        
+                  </div>
+
+                  <section class="buttons-block">
+                    <form action="">
+                      <input type="button" class="btn btn-icon btn-edit" value="Редактировать"/>
+                      <input type="button" class="btn btn-icon btn-delete" value="Удалить"/>
+                    </form>
+                  </section>
+
+                </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">OnDoc — система персонального здравоохранения</p>
+      </div>
+    </footer>
+
+    
+    <script src="js/libraries.js" ></script>
+
+    <script>
+
+      $(function(){
+
+        $(".select-list-text").on("click", function(){
+          $(this).parents(".select-list").toggleClass('open');
+        })
+
+        $(".list-drop-item").on("click", function(){
+
+          $(this).parents('.select-list').find(".select-list-text").text($(this).text());
+          $(this).parents('.select-list').find(".select-value").val($(this).attr('data-value'));
+          $(this).parents(".select-list").removeClass('open');
+
+        });       
+        
+      })
+
+      $(".dropdown-menu-link").click(function () {
+        $(".dropdown-menu").toggleClass('display');
+      });
+
+      $(".tabs a").click(function () {
+        $("a").toggleClass('current');
+      });
+
+      $(".exit").click(function () {
+        $(".quiz").css('opacity','0');
+      });
+
+      $('ul.tabs').on('click', 'li:not(.current)', function() {  
+          $(this).addClass('current').siblings().removeClass('current')  
+            .parents('.tabs-section').find('div.graph').eq($(this).index()).fadeIn(150).siblings('div.graph').hide();  
+      });
+
+    </script>
+    
+    
+  </body>
+</html>

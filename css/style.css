@@ -388,6 +388,7 @@ p {
   border-radius: 10px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2)
   /* В маленьких виджетах */
+  /* Лекарства */
 }
 .widget--mini {
   min-height: 355px;
@@ -420,6 +421,9 @@ p {
 }
 .widget-head p .plus:hover {
   opacity: 0.6;
+}
+.widget-head--grey p {
+  color: rgba(0, 0, 0, 0.9);
 }
 .widget-head .icon:before {
   content: "";
@@ -694,40 +698,19 @@ p {
 .widget .reactions-block .reaction-prohibited:before {
   background: url(../img/reaction-prohibited.png) no-repeat;
 }
-.widget .reactions-block .popup-link {
-  position: relative;
+.widget .medicine a {
+  font-family: 'Gotham', Arial, sans-serif;
+  margin: 12px 0 5px;
+  display: block;
+  font-size: 14px;
+  opacity: 0.9;
 }
-.widget .reactions-block .popup-link:hover .popup {
-  display: inherit;
-}
-.widget .reactions-block .popup {
-  width: 194px;
-  cursor: default;
-  background: #fff;
-  text-align: left;
-  padding: 22px 15px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  right: -194px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 100;
-  display: none;
-}
-.widget .reactions-block .popup:before {
-  content: "";
-  width: 7px;
-  height: 18px;
-  position: absolute;
-  left: -7px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: url(../img/triangle.png) no-repeat;
+.widget .medicine span {
+  font-size: 11px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  color: rgba(0, 0, 0, 0.6);
 }
 /* Оформление листа */
 .widget-list .list-item {
@@ -736,6 +719,9 @@ p {
   background-image: url(../img/list-arrow.png);
   background-repeat: no-repeat;
   background-position: 92% 50%;
+}
+.widget-list .list-item:hover {
+  background-color: #e8f6fa;
 }
 .widget-list .list-item a {
   display: block;
@@ -751,7 +737,8 @@ p {
   padding: 0 30px 0 20px;
   transition: 0.2s ease color;
 }
-.widget-list .list-item .name {
+.widget-list .list-item .name,
+.widget-list .list-item .doc {
   font-family: 'Gotham-Medium', Arial, sans-serif;
   margin-bottom: 4px;
 }
@@ -779,6 +766,38 @@ p {
 .widget-list .list-item:hover .data,
 .widget-list .list-item:hover .event {
   color: #dc4531;
+}
+.widget-list .list-item .desc {
+  font-family: 'Gotham', Arial, sans-serif;
+  font-size: 14px;
+  padding: 3px 0 0 20px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.widget-list .list-item .address-date {
+  padding: 15px 0 0 20px;
+}
+.widget-list .list-item .address-date span {
+  font-family: 'Gotham', Arial, sans-serif;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.widget-list .list-item .address-date span:before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/address-date-icons.png) no-repeat;
+}
+.widget-list .list-item .address-date .address {
+  background-position: 0 -2px;
+}
+.widget-list .list-item .address-date .date:before {
+  background-position: -34px -1px;
+}
+.widget-list--noarrow .list-item {
+  background: none;
+  padding: 17px 15px 13px 0px;
 }
 /* Блок с датой */
 .date-block {
@@ -874,7 +893,7 @@ p {
 }
 /* Виджет: текущий курс - иконка */
 .widget-head .icon-course:before {
-  width: 14px;
+  width: 15px;
   height: 20px;
   background-position: -47px -6px;
 }
@@ -883,7 +902,7 @@ p {
 }
 /* Виджет: события - иконка */
 .widget-head .icon-event:before {
-  width: 20px;
+  width: 21px;
   height: 20px;
   background-position: -93px -6px;
 }
@@ -922,6 +941,14 @@ p {
   width: 14px;
   height: 19px;
   background-position: -103px -91px;
+}
+/* Страница консультаций - иконка */
+.widget-head .icon-consult:before {
+  width: 15px;
+  height: 22px;
+  position: relative;
+  top: -1px;
+  background: url(../img/icon-consult.png) no-repeat;
 }
 /* Виджет - пульс */
 .pulse-widget {
@@ -1219,6 +1246,117 @@ p {
           transform: translateY(-50%);
   background: url(../img/icon-clinic.png) no-repeat;
 }
+/* Блок с описанием врача */
+.medic-block {
+  position: relative;
+}
+.medic-block img {
+  width: 46px;
+  height: 46px;
+}
+.medic-block-name .name {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  margin: 6px 0;
+  display: block;
+  font-size: 14px;
+  color: #20b3cd;
+}
+.medic-block-name p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.medic-block-date p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+}
+.medic-block .icon-academy:before {
+  content: "";
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-academy.png) no-repeat;
+}
+.medic-block .icon-calendar:before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/address-date-icons.png) no-repeat;
+}
+.medic-block-name {
+  position: relative;
+}
+.popup.medic-block-popup {
+  width: 302px;
+  top: -103px;
+  left: 190px;
+  padding: 22px 0;
+  text-align: center;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+.popup.medic-block-popup:before {
+  top: 110px;
+}
+.popup.medic-block-popup .avatar img {
+  width: 111px;
+  height: 111px;
+  padding: 3px;
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 50%;
+}
+.popup.medic-block-popup .medic-block-head {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px 0 5px;
+}
+.popup.medic-block-popup .medic-block-desc {
+  font-size: 12px;
+}
+.popup.medic-block-popup .head-line span {
+  font-family: 'Gotham', Arial, sans-serif;
+  padding: 0 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.popup.medic-block-popup section {
+  padding: 0 20px;
+  text-align: left;
+}
+.popup.medic-block-popup section p {
+  font-size: 12px;
+  margin: 2px 0;
+  color: rgba(0, 0, 0, 0.9);
+}
+.popup.medic-block-popup section a {
+  display: inline-block;
+}
+.popup.medic-block-popup .section-phone {
+  text-align: center;
+}
+.popup.medic-block-popup .icon-doctor:before,
+.popup.medic-block-popup .icon-age:before {
+  content: "";
+  width: 13px;
+  height: 15px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-age-doctor.png) no-repeat;
+}
+.popup.medic-block-popup .icon-doctor:before {
+  background-position: 1px 1px;
+}
+.popup.medic-block-popup .icon-age:before {
+  background-position: 2px -20px;
+}
 /* Настройка виджетов */
 .settings-block {
   width: 100%;
@@ -1388,6 +1526,42 @@ p {
 }
 .items-block input[type="checkbox"]:checked + label {
   border-color: #1da4c5;
+}
+/* Стили для поп-апа */
+.popup-link {
+  position: relative;
+}
+.popup-link:hover .popup {
+  display: inherit;
+}
+.popup {
+  width: 194px;
+  cursor: default;
+  background: #fff;
+  text-align: left;
+  padding: 22px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -194px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 100;
+  display: none;
+}
+.popup:before {
+  content: "";
+  width: 7px;
+  height: 18px;
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/triangle.png) no-repeat;
 }
 /* Общие стили */
 body {
@@ -1683,6 +1857,9 @@ a:hover {
   background: url(../img/icon-setting.png) no-repeat;
 }
 /* Элементы сортировки */
+.sorting {
+  /* Фильтр */
+}
 .sorting a {
   font-size: 15px;
   padding: 7px 17px;
@@ -1739,6 +1916,25 @@ a:hover {
 }
 .sorting .icon-directory.current:before {
   background-position: -257px -36px;
+}
+.sorting .icon-filter {
+  position: relative;
+}
+.sorting .icon-filter:before {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-position: -301px 4px;
+}
+.sorting .select-list-filter {
+  line-height: 35px;
+  margin-left: 26%;
+}
+.sorting .select-list-filter .list-drop {
+  min-width: 100px;
 }
 /* Пагинация */
 .pagination {
