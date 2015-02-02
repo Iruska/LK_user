@@ -186,6 +186,7 @@
 		color: #666;
 	}
 	.reception{
+		font-size: 0;
 		text-align: center;
 		&-time{
 			span{
@@ -207,7 +208,7 @@
 			color: rgba(0,0,0,0.5);
 			text-transform: uppercase;
 			border: 1px solid #ccc;
-			margin: 10px 0;
+			margin: 10px 2px;
 			&.active{
 				color: #fff;
 				background: @blue-color;
@@ -237,7 +238,6 @@
 		p{
 			font-size: 14px;
 			margin-bottom: 2px;
-			color: rgba(0,0,0,0.9);
 		}
 		.date{
 			.gotham;
@@ -303,6 +303,10 @@
 
 
 /* Оформление листа */ 
+.scroll-list{
+	height: 780px;
+	overflow: scroll;
+}
 .widget-list{
 
 	.list-item{
