@@ -328,6 +328,10 @@ input[type="button"] {
   left: auto;
   right: 0;
 }
+.select-list .list-drop_pages:before {
+  left: 23%;
+  top: -10px;
+}
 .select-list.open .list-drop {
   display: block;
 }
@@ -362,6 +366,38 @@ input::-moz-placeholder {
 }
 input::-webkit-input-placeholder {
   color: #000;
+}
+/* Стилизация чекбокса в поп-апе врача */
+.check-view input[type="checkbox"] {
+  display: none;
+  margin: 20px;
+}
+.check-view input[type="checkbox"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44px;
+  height: 27px;
+  background: #ccc;
+  border-radius: 100px;
+  position: relative;
+}
+.check-view input[type="checkbox"]:checked + label {
+  background: #20b3cd;
+}
+.check-view input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  height: 23px;
+  width: 23px;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+}
+.check-view input[type="checkbox"]:checked + label::before {
+  left: auto;
+  right: 2px;
 }
 /* Шрифты */
 @font-face {
@@ -1001,6 +1037,15 @@ p {
   vertical-align: middle;
   background: url(../img/icon-pulse.png) no-repeat;
 }
+.pulse-info .icon-sugar:before {
+  content: "";
+  width: 14px;
+  height: 17px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-sugar.png) no-repeat;
+}
 .pulse-info .graph-block {
   padding: 5px 0 38px;
   text-align: center;
@@ -1316,7 +1361,8 @@ p {
   width: 302px;
   top: -103px;
   left: 190px;
-  padding: 22px 0;
+  padding: 22px 0 15px;
+  display: inherit;
   text-align: center;
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
@@ -1349,8 +1395,10 @@ p {
   color: rgba(0, 0, 0, 0.5);
 }
 .popup.medic-block-popup section {
-  padding: 0 20px;
   text-align: left;
+}
+.popup.medic-block-popup section .section-wrapper {
+  padding: 0 20px;
 }
 .popup.medic-block-popup section p {
   font-size: 12px;
@@ -1378,6 +1426,80 @@ p {
 }
 .popup.medic-block-popup .icon-age:before {
   background-position: 2px -20px;
+}
+.popup.medic-block-popup .about-spec .head-line {
+  margin-top: 10px;
+}
+.popup.medic-block-popup .about-spec p {
+  margin-bottom: 14px;
+}
+.popup.medic-block-popup .check-view {
+  padding: 15px 0 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.popup.medic-block-popup .check-view p {
+  width: 60%;
+  float: left;
+  line-height: 16px;
+  font-size: 14px;
+}
+.popup.medic-block-popup .check-view .check-form {
+  width: 40%;
+  float: right;
+  text-align: right;
+}
+.popup.medic-block-popup .support {
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.popup.medic-block-popup .support p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.popup.medic-block-popup .support p:before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-support.png) no-repeat;
+}
+/* Стили в поп-апе врача - адреса */
+.place-address .head {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  margin-top: 5px!important;
+}
+.place-address .head-line {
+  margin-bottom: 5px;
+}
+.place-address .place-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: url(../img/list-arrow.png);
+  background-repeat: no-repeat;
+  background-position: 92% 48%;
+}
+.place-address .place-item-link {
+  width: 100%;
+  display: block;
+}
+.place-address .place-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.place-address .place-img {
+  width: 46px;
+  margin-right: 14px;
+}
+.place-address .icon-metro:before {
+  content: "";
+  width: 11px;
+  height: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/icon-metro.png) no-repeat;
 }
 /* Настройка виджетов */
 .settings-block {

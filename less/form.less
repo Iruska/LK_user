@@ -89,6 +89,10 @@ input[type="button"]{
 		&_pages{
 			left: auto;
 			right: 0;
+			&:before{
+				left: 23%;
+				top: -10px;
+			}
 		}
 	}
 	&.open{
@@ -131,3 +135,42 @@ input[type="button"]{
 
 input::-moz-placeholder { color: #000; }
 input::-webkit-input-placeholder { color: #000; }
+
+
+/* Стилизация чекбокса в поп-апе врача */
+
+.check-view input[type="checkbox"]{
+  display: none;
+  margin: 20px;
+}
+
+.check-view input[type="checkbox"] + label{
+  display: inline-block;
+  vertical-align: middle;
+  width: 44px;
+  height: 27px;
+  background: #ccc;
+  border-radius: 100px;
+  position: relative;
+}
+
+.check-view input[type="checkbox"]:checked + label{
+  background: @blue-color;
+}
+
+.check-view input[type="checkbox"] + label::before{
+  content: "";
+  display: block;
+  height: 23px;
+  width: 23px;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+}
+
+.check-view input[type="checkbox"]:checked + label::before {
+  left: auto;
+  right: 2px;
+} 

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Заголовок страницы -->
+    <title>LK-monitoring-in</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="Ключевые слова">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if IE]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Верхняя шапка -->
+    <header class="header">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-2">
+            <a href="index.html" class="header_logo" title="OnDoc">
+              <img src="img/main-logo.png" alt="OnDoc" />
+            </a>
+          </div>
+          <div class="col-7">
+            <a href="#" class="question icon-lamp">С чего начать?</a>
+          </div>
+          <div class="col-3">
+            <div class="profile-menu pull-right">
+              <img src="img/avatar.png" class="avatar" alt="Смирнов Иван" />
+              <a href="#" class="profile-link dropdown-menu-link icon-arrow">Смирнов Иван</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </header>
+
+    <!-- Общий сблок -->
+    <div class="main-page">
+      <div class="container">
+        <div class="row main-row-customize">
+          <aside class="col-2 col-2-cust">
+            <!-- Боковая панель -->
+            <div class="sidebar">
+              <!-- Блок с фото и именем -->
+              <div class="sidebar_profile">
+                <div class="profile-avatar">
+                  <img src="img/big-avatar.png" alt="Смирнов Иван" />
+                </div>
+                <p class="profile-name">Смирнов Иван</p>
+              </div>
+              <!-- Навигация -->
+              <ul class="sidebar_menu">
+                <li class="menu-link"><a href="index.html" class="icon icon-heart">Состояние здоровья</a></li>
+                <li class="menu-link current"><a href="monitoring.html" class="icon icon-monitor">Монитор показателей</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-cart">Медицинская карта</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-data">Медицинские данные</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-doctor">Врачи и клиники</a></li>
+                <li class="menu-link"><a href="#" class="icon icon-bonus">ВитаБонус</a></li>
+              </ul>
+            </div>
+          </aside>
+          <section class="col-10 col-10-cust">
+
+            <div class="main-head row">
+              <div class="breadcrumbs col-4">
+                <a href="index.html" class="back icon-back">Назад</a>
+              </div>
+              <div class="date-block col-8">
+                <div class="row">
+                  <div class="col-2">
+                    <div class="month">
+                      <form action="" method="">
+                        <!-- Первый вариант (немного кривой) -->
+                        <!-- <label class="customize-select">
+                          <select>
+                            <option selected>Месяц</option>
+                            <option>Январь</option>
+                            <option>Февраль</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Июнь</option>
+                            <option>Июль</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                            <option>Октябрь</option>
+                            <option>Ноябрь</option>
+                            <option>Декабрь</option>
+                          </select>
+                        </label> -->
+
+                        <!-- Второй вариант -->
+                        <div class="select-list">
+                          <div class="select-list-text">Месяц</div>
+                          <input type="hidden" class="select-value" name="select-value" value="0" />
+                          <ul class="list-drop">
+                            <li class="list-drop-item" data-value='1'>Январь</li>
+                            <li class="list-drop-item" data-value='2'>Февраль</li>
+                            <li class="list-drop-item" data-value='3'>Март</li>
+                            <li class="list-drop-item" data-value='4'>Апрель</li>
+                            <li class="list-drop-item" data-value='5'>Март</li>
+                            <li class="list-drop-item" data-value='6'>Май</li>
+                            <li class="list-drop-item" data-value='7'>Июнь</li>
+                            <li class="list-drop-item" data-value='8'>Июль</li>
+                            <li class="list-drop-item" data-value='9'>Август</li>
+                            <li class="list-drop-item" data-value='10'>Сентябрь</li>
+                            <li class="list-drop-item" data-value='11'>Октябрь</li>
+                            <li class="list-drop-item" data-value='12'>Декабрь</li>
+                          </ul>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="date">
+                      <p>21/05/2014 - 21/06/2014</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="widget pulse-widget">
+              <div class="pulse-info">
+                <p class="head icon-sugar">Сахар</p>
+                <a href="#" class="icon-plus"><img src="img/icon-plus.png" alt="+"></a>
+                <div class="graph-block">
+                  <img src="img/img-graph.png" alt="" />
+                </div>
+              </div>
+              <div class="pulse-data">
+                <p class="head">Внесенные данные</p>
+                <div class="row">
+                  <div class="col-4">
+                    <table class="table-data">
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                        <td>
+                          <div class="shedule">
+                            <div class="row">
+                              <div class="shedule-block col-3">
+                                <p class="icon icon-sun"></p>
+                                <p>Утром</p>
+                              </div>
+                              <div class="shedule-block col-3">
+                                <p class="icon icon-eat"></p>
+                                <p>До еды</p>
+                              </div>
+                              <div class="shedule-block col-3">
+                                <p class="icon icon-food"></p>
+                                <p>После еды</p>
+                              </div>
+                              <div class="shedule-block col-3">
+                                <p class="icon icon-moon"></p>
+                                <p>Вечером</p>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-4">
+                    <table class="table-data">
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-4">
+                    <table class="table-data">
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                      <tr>
+                        <td class="date"><span class="grey">1 / 09</span></td>
+                        <td class="time"><span class="grey">15:56</span></td>
+                        <td class="number"><span>70</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination">
+                <form action="" method="">
+                  <div class="row">
+
+                    <div class="col-6">
+                      <div class="select-list">
+                        <label>Показывать по</label>
+                        <div class="select-list-text">30</div>
+                        <input type="hidden" class="select-value" name="select-value" value="3" />
+                        <ul class="list-drop list-drop_pages">
+                          <li class="list-drop-item" data-value='1'>10</li>
+                          <li class="list-drop-item" data-value='2'>20</li>
+                          <li class="list-drop-item" data-value='3'>30</li>
+                          <li class="list-drop-item" data-value='4'>50</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-6 pull-right">
+                      <ul class="numeration">
+                        <li class="active"><a href="?page=1">1</a></li>
+                        <li><a href="?page=2">2</a></li>
+                        <li><a href="?page=3">3</a></li>
+                        <li><a href="?page=4">4</a></li>
+                        <li><a href="?page=5">5</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">OnDoc — система персонального здравоохранения</p>
+      </div>
+    </footer>
+
+    
+    <script src="js/libraries.js" ></script>
+
+    <script>
+
+      $(function(){
+
+        $(".select-list-text").on("click", function(){
+          $(this).parents(".select-list").toggleClass('open');
+        })
+
+        $(".list-drop-item").on("click", function(){
+
+          $(this).parents('.select-list').find(".select-list-text").text($(this).text());
+          $(this).parents('.select-list').find(".select-value").val($(this).attr('data-value'));
+          $(this).parents(".select-list").removeClass('open');
+
+        });       
+        
+      })
+
+      $(".dropdown-menu-link").click(function () {
+        $(".dropdown-menu").toggleClass('display');
+      });
+
+      $(".tabs a").click(function () {
+        $("a").toggleClass('current');
+      });
+
+      $(".exit").click(function () {
+        $(".quiz").css('opacity','0');
+      });
+
+      $('ul.tabs').on('click', 'li:not(.current)', function() {  
+          $(this).addClass('current').siblings().removeClass('current')  
+            .parents('.tabs-section').find('div.graph').eq($(this).index()).fadeIn(150).siblings('div.graph').hide();  
+      });
+
+    </script>
+    
+    
+  </body>
+</html>

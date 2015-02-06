@@ -567,6 +567,15 @@
 		vertical-align: middle;
 		background: url(../img/icon-pulse.png) no-repeat;
 	}
+	.icon-sugar:before{
+		content: "";
+		width: 14px;
+		height: 17px;
+		margin-right: 8px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-sugar.png) no-repeat;
+	}
 	.graph-block{
 		padding: 5px 0 38px;
 		text-align: center;
@@ -862,8 +871,8 @@
 	width: 302px;
 	top: -103px;
 	left: 190px;
-	padding: 22px 0;
-	// display: inherit;
+	padding: 22px 0 15px;
+	display: inherit;
 	text-align: center;
 	transform: translate(0);
 	&:before{ top: 110px; }
@@ -894,8 +903,8 @@
 		color: rgba(0,0,0,.5); 
 	}
 	section{
-		padding: 0 20px;
 		text-align: left;
+		.section-wrapper{ padding: 0 20px; }
 		p{
 			font-size: 12px;
 			margin: 2px 0;
@@ -921,7 +930,85 @@
 	.icon-age:before{
 		background-position: 2px -20px;
 	}
+	.about-spec{
+		.head-line{ margin-top: 10px; }
+		p{
+			margin-bottom: 14px;
+		}
+	}
+	.check-view{
+		padding: 15px 0 12px;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		p{
+			width: 60%;
+			float: left;
+			line-height: 16px;
+			font-size: 14px;
+		}
+		.check-form{
+			width: 40%;
+			float: right;
+			text-align: right;
+		}
+	}
+	.support{
+		padding-top: 15px;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		p{
+			font-size: 13px;
+			color: rgba(0,0,0,.5);
+			&:before{
+				content: "";
+				width: 17px;
+				height: 17px;
+				margin-right: 8px;
+				display: inline-block;
+				vertical-align: middle;
+				background: url(../img/icon-support.png) no-repeat;
+			}
+		}
+	}
 }
+/* Стили в поп-апе врача - адреса */
+.place-address{
+	.head{ 
+		.gotham-m; 
+		margin-top: 5px!important;
+	}
+	.head-line{
+		margin-bottom: 5px;
+	}
+	.place-item{
+		padding: 10px 20px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		background-image: url(../img/list-arrow.png);
+		background-repeat: no-repeat;
+		background-position: 92% 48%;
+
+		&-link{
+			width: 100%;
+			display: block;
+		}
+		&:last-child{ 
+			border-bottom: 0; 
+			padding-bottom: 0;
+		}
+	}
+	.place-img{ 
+		width: 46px; 
+		margin-right: 14px;
+	}
+	.icon-metro:before{
+		content: "";
+		width: 11px;
+		height: 8px;
+		margin-right: 4px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../img/icon-metro.png) no-repeat;
+	}
+} 
+
 
 
 
