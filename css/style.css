@@ -766,9 +766,24 @@ p {
   vertical-align: top;
   color: rgba(0, 0, 0, 0.6);
 }
+.widget .pdf-list {
+  padding: 15px 0;
+  font-size: 0;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.widget .pdf-list a {
+  margin: 0 5px;
+  width: 47px;
+  display: inline-block;
+  vertical-align: top;
+}
+.widget .pdf-list a:hover {
+  opacity: 0.6;
+}
 /* Оформление листа */
 .scroll-list {
-  height: 780px;
+  height: 800px;
   overflow: scroll;
 }
 .widget-list .list-item {
@@ -1176,7 +1191,7 @@ p {
 }
 /* Страница рекомендаций - оформление информации */
 .description-block {
-  padding: 0 19px 25px!important;
+  padding: 0 19px 8px!important;
   border-left: 1px solid #f0f0f0
   /* Большой заголовок */
   /* Серый подзаголовок с линий */
@@ -1362,7 +1377,6 @@ p {
   top: -103px;
   left: 190px;
   padding: 22px 0 15px;
-  display: inherit;
   text-align: center;
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
